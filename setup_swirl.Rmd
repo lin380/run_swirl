@@ -1,0 +1,47 @@
+---
+title: "Setup `swirl` lessons"
+author: "Jerid Francom"
+date: '`r paste("Updated:", format(Sys.Date(), "%b %d, %Y"))`'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Overview
+
+The R Markdown document can be used to install and/ or update swirl lessons for this course. The code and process is documented below. 
+
+# Load swirl package
+
+First we will load the `swirl` package.
+
+```{r load-swirl}
+library(swirl)
+```
+
+# Remove current lessons
+
+Before we download the (current) LIN 380 swirl lessons, let's remove the existing lessons
+
+```{r uninstall-lessons}
+uninstall_all_courses(force = TRUE)
+```
+
+# Update lessons
+
+Now we can update the lessons with the most current version available. 
+
+```{r install-lessons}
+install_course_github(github_username = "lin380", course_name = "swirl")
+```
+
+Now you can run the `run_swirl.R` script to get started with the swirl course and select a lesson. Alternatively you can the following commands from the Console: 
+
+```r
+library(swirl)
+swirl()
+```
+
+Then follow the prompts to select the swirl course and select a lesson.
