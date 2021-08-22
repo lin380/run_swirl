@@ -1,7 +1,7 @@
 ---
 title: "Setup `swirl` lessons"
 author: "Jerid Francom"
-date: '`r paste("Updated:", format(Sys.Date(), "%b %d, %Y"))`'
+date: '`r paste("Updated:", format(Sys.time(), "%b %d, %Y at %r"))`'
 output: html_document
 ---
 
